@@ -37,6 +37,11 @@ Una aplicación web completa desarrollada en PHP para la gestión y venta de tic
 - ✅ **Generación automática de tickets en PDF**
 - ✅ Perfil personalizable con foto
 
+- ### Para Administrador
+- ✅ Inicio de sesión
+- ✅ Aprobar organizadores
+- ✅ Monitoreo general de la app
+
 ### Características Generales
 - ✅ Dashboard interactivo con categorías
 - ✅ Sistema de autenticación basado en sesiones
