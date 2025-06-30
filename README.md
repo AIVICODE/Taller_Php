@@ -12,6 +12,8 @@ Una aplicación web completa desarrollada en PHP para la gestión y venta de tic
 - [Uso](#uso)
 - [API Reference](#api-reference)
 
+[#Prototipado Figma](https://www.figma.com/proto/AHn70jh8VVLNr8RYx8TWfg/Ticketed-Web-Design--Community-?node-id=68-707&t=kFhrivLGaQw2sTs3-1)
+
 ## 🚀 Características Principales
 
 ### Para Visitantes (Sin Cuenta)
