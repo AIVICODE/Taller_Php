@@ -1,0 +1,203 @@
+@import url('../variables.css');
+:root {
+    --dark-blue: #023047;
+    --blue: #219EBC;
+    --yellow: #FFB703;
+    --white: #ffffff;
+    --broken-white: #f9f9f9;
+    --black: #212121;
+    --red: #e02828;
+    --gray: #cccccc;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-side {
+    width: 50%;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side {
+    width: 50%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 2rem;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1.5px solid var(--dark-blue);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--broken-white);
+}
+
+small {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--yellow);
+    color: var(--black);
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f7d84b;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+/* Logo */
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+/* Línea completa para "¿Aún no estás registrado?" */
+.alt-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+}
+
+/* Línea completa para términos y condiciones */
+.terminos {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.terminos a {
+    color: var(--dark-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.error {
+    color: var(--red);
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.success {
+    color: var(--dark-blue);
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.lock-icon {
+    font-size: 1rem;
+}

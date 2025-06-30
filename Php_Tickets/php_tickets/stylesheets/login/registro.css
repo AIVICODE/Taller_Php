@@ -1,0 +1,265 @@
+@import url('../variables.css');
+:root {
+    --dark-blue: #023047;
+    --blue: #219EBC;
+    --yellow: #FFB703;
+    --white: #ffffff;
+    --broken-white: #f9f9f9;
+    --black: #212121;
+    --red: #e02828;
+    --gray: #cccccc;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-side {
+    width: 50%;
+    background-color: var(--yellow);
+}
+
+.right-side {
+    width: 50%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registro-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1.5px solid var(--dark-blue);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--broken-white);
+}
+
+select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23023047" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1.2rem;
+    padding-right: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(33, 158, 188, 0.1);
+    outline: none;
+}
+
+select:hover {
+    border-color: var(--blue);
+}
+
+select option {
+    padding: 0.8rem;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1rem;
+}
+
+select option[value="cliente"] {
+    background-color: #e8f5e8;
+}
+
+select option[value="organizador"] {
+    background-color: #fff3cd;
+}
+
+/* Estilo especial para el selector de tipo de usuario */
+#tipo_usuario {
+    background-color: var(--white);
+    border: 2px solid var(--dark-blue);
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tipo_usuario:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(2, 48, 71, 0.1);
+}
+
+#tipo_usuario:focus {
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.2);
+}
+
+/* Estilo para el label del tipo de usuario */
+label[for="tipo_usuario"] {
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+label[for="tipo_usuario"]:before {
+    content: "👤";
+    font-size: 1.2rem;
+}
+
+/* Estilo para el texto de ayuda del tipo de usuario */
+#tipo_usuario + small {
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.2rem;
+    padding: 0.5rem;
+    background-color: rgba(33, 158, 188, 0.1);
+    border-radius: 4px;
+    border-left: 3px solid var(--blue);
+}
+
+small {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--yellow);
+    color: var(--black);
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f7d84b;
+}
+
+a {
+    display: block;
+    margin-top: 1.2rem;
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--blue);
+}
+.left-side {
+    width: 50%;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.success {
+    color: var(--dark-blue);
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.error {
+    color: var(--red);
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Efecto hover para mejor UX */
+.registro-container form {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

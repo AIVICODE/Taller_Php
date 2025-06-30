@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Definición de gradientes y sombras -->
+  <defs>
+    <!-- Gradiente para el fondo -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para la silueta -->
+    <linearGradient id="silhouetteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9e9e9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#757575;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Filtro para sombra suave -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="0" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Círculo de fondo con sombra -->
+  <circle cx="100" cy="100" r="98" fill="url(#backgroundGradient)" stroke="#e0e0e0" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Silueta de persona con gradiente -->
+  <g fill="url(#silhouetteGradient)">
+    <!-- Cabeza -->
+    <circle cx="100" cy="75" r="35" />
+    
+    <!-- Cuerpo -->
+    <path d="M100,115 C55,115 45,145 45,180 L155,180 C155,145 145,115 100,115 Z" />
+  </g>
+  
+  <!-- Detalles sutiles y borde para dar profundidad -->
+  <circle cx="100" cy="75" r="33" fill="none" stroke="#bdbdbd" stroke-width="1.5" opacity="0.7" />
+  
+  <!-- Iniciales o icono opcional -->
+  <text x="100" y="190" font-family="Arial, sans-serif" font-size="12" fill="#757575" text-anchor="middle">Usuario</text>
+</svg>

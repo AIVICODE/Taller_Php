@@ -1,0 +1,204 @@
+/* Estilos personalizados con integraci¨®n Bootstrap */
+
+/* Background negro para toda la p¨¢gina */
+body {
+    background-color: var(--black) !important;
+    color: var(--white);
+}
+
+/* Colores personalizados para Bootstrap */
+:root {
+    --bs-primary: var(--yellow);
+    --bs-primary-rgb: 245, 210, 80;
+    --bs-secondary: var(--dark-blue);
+    --bs-secondary-rgb: 31, 86, 115;
+}
+
+/* Ajustes para elementos con fondo negro */
+.card {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.card-header.bg-primary {
+    background-color: var(--dark-blue) !important;
+    color: var(--white) !important;
+}
+
+/* Ajuste para formularios en fondo negro */
+.form-control, .form-select {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--gray);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 0.2rem rgba(83, 179, 203, 0.25);
+}
+
+.form-text {
+    color: var(--dark-blue);
+}
+
+/* Override de estilos de Bootstrap */
+.btn-primary {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--black);
+    font-weight: 600;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--dark-blue);
+}
+
+.btn-secondary {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #153d54;
+    border-color: #153d54;
+}
+
+/* Estilos para el formulario de compra */
+.comprar-ticket-form {
+    margin-bottom: 1.5rem;
+}
+
+.evento-img-grande {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    font-size: 1.3em;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.evento-img-grande:hover {
+    transform: scale(1.05);
+}
+
+.evento-ticket-datos h4 {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.evento-ticket-datos p {
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.cupo-restante {
+    color: var(--dark-blue);
+    font-size: 0.9em;
+}
+
+.cupo-badge {
+    background-color: var(--yellow);
+    color: var(--black);
+    font-weight: 600;
+}
+
+.comprar-btn {
+    min-width: 160px;
+}
+
+/* Media queries para responsive */
+@media (max-width: 767px) {
+    .evento-ticket-datos h4 {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+    
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .evento-img-grande {
+        margin: 0 auto;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: row !important;
+    }
+    
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-group-text {
+        margin-top: 0.5rem;
+        border-radius: 0.25rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Efectos y animaciones */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Estilos para iconos */
+.bi {
+    margin-right: 5px;
+}
+
+/* Modos oscuro y claro (media query) - ahora usando variables CSS */
+@media (prefers-color-scheme: dark) {
+    /* Los estilos ya est¨¢n aplicados globalmente con variables CSS */
+    body {
+        background-color: var(--white) !important;
+    }
+    
+    .card {
+        background-color: var(--white);
+        color: var(--black);
+    }
+    
+    .form-control, .form-select {
+        background-color: var(--white);
+        color: var(--black);
+        border-color: var(--gray);
+    }
+    
+    .form-text {
+        color: var(--dark-blue);
+    }
+}

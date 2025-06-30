@@ -1,0 +1,247 @@
+/* Estilos para la visualización de tickets comprados */
+
+.tickets-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.tickets-title {
+    color: var(--dark-blue);
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--yellow);
+}
+
+.no-tickets {
+    background-color: var(--broken-white);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.no-tickets p {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.no-tickets-icon {
+    font-size: 3rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.ticket-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.ticket-header {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 15px;
+    position: relative;
+}
+
+.ticket-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    padding-right: 60px;
+}
+
+.ticket-header .ticket-date {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.ticket-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.ticket-status.active {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.ticket-status.expired {
+    background-color: var(--gray);
+    color: var(--dark-blue);
+}
+
+.ticket-body {
+    padding: 20px;
+}
+
+.ticket-info {
+    margin-bottom: 20px;
+}
+
+.ticket-info-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.ticket-info-row:last-child {
+    margin-bottom: 0;
+}
+
+.ticket-info-label {
+    width: 120px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    flex-shrink: 0;
+}
+
+.ticket-info-value {
+    color: var(--black);
+    flex-grow: 1;
+}
+
+.ticket-footer {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eaeaea;
+}
+
+.ticket-quantity {
+    background-color: var(--yellow);
+    color: var(--black);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.ticket-price {
+    font-weight: 700;
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+}
+
+.download-ticket {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.download-ticket:hover {
+    background-color: var(--blue);
+}
+
+.ticket-actions {
+    text-align: center;
+    padding: 0 20px 20px;
+}
+
+.ticket-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 5px;
+    max-height: 150px;
+}
+
+.ticket-event-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.ticket-event-image:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .tickets-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .ticket-header h3 {
+        font-size: 1.2rem;
+        padding-right: 50px;
+    }
+    
+    .ticket-status {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tickets-container {
+        width: 95%;
+        padding: 10px 0;
+    }
+    
+    .tickets-title {
+        font-size: 1.5rem;
+    }
+    
+    .ticket-info-row {
+        flex-direction: column;
+    }
+    
+    .ticket-info-label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .ticket-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
